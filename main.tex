@@ -1,0 +1,60 @@
+\documentclass{turabian-researchpaper} % \documentclass{} is the first command in any LaTeX code.  It is used to define what kind of document you are creating such as an article or a book, and begins the document preamble
+\usepackage{csquotes, ellipsisamsmath, pdf14, chiacgo-annotate} % \usepackage is a command that allows you to add functionality to your LaTeX code
+
+% Specify paper size with geometry package
+\usepackage[pass, letterpaper]{geometry}
+
+% For citations
+\usepackage{biblatex-chicago}
+\addbibresource{works-cited.bib}
+
+\title{Logic Project}
+\subtitle{A First Effort}
+\author{Maddox K. Larson}
+\date{\today}
+
+% The preamble ends with the command \begin{document}
+\begin{document} % All begin commands must be paired with an end command somewhere
+    \maketitle % creates title using information in preamble (title, author, date)
+    
+    \section{Hello World!} % creates a section
+    
+    \textbf{Hello World!} Today I am learning \LaTeX. %notice how the command will end at the first non-alphabet charecter such as the . after \LaTeX
+     \LaTeX{} is a great program for writing math. I can write in line math such as $a^2+b^2=c^2$ %$ tells LaTexX to compile as math
+     . I can also give equations their own space: 
+    \begin{equation} % Creates an equation environment and is compiled as math
+    \gamma^2+\theta^2=\omega^2
+    \end{equation}
+    If I do not leave any blank lines \LaTeX{} will continue  this text without making it into a new paragraph. Notice how there was no indentation in the text after equation (1).  
+    Also notice how even though I hit enter after that sentence and here $\downarrow$
+     \LaTeX{} formats the sentence without any break. Also look how it doesn't matter how many spaces I put between my words.
+    
+    For a new paragraph I can leave a blank space in my code. 
+
+    \section{Introduction}
+
+    Amazing, introductory ideas that provide unique insight into your field of interest and ``wows" your professor---formatted based on Kate L. Turabian's \emph{A Manual for Writers of Research Papers, Theses, and Dissertations} (9th edition).
+    
+    \section{An Interesting Section}
+    
+    Great thoughts that further your argument. This includes lots of strong evidence presented throughout several paragraphs, each accompanied by necessary citations.
+    \begin{quotation}
+        \noindent Here is a block quotation---a passage from a text you found insightful and wanted to share with others. Maybe it is from a journal article, website, or book. Irrespective, it should support the argument being made.\footnote{A citation for the quoted material.}
+    \end{quotation}
+    Maybe a sentence or two that bring the argument and evidence together.\autocite[34]{example_source}
+    
+    
+    \section{Another Insightful Section}
+    
+    More ideas that really make this a great paper. Maybe a footnote or two.\footnote{Some peripheral thoughts that belong in a note.}
+    
+    
+    \section{Conclusions}
+    
+    At this point, you've changed everything (including your marks!). Time to wrap up!
+    
+    
+    \clearpage
+    \printbibliography
+
+\end{document} % This is the end of the document
